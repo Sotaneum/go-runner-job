@@ -11,15 +11,16 @@ import (
 )
 
 type JobAdmin struct {
-	Owner   string
-	Members []string
+	Owner   string   `json:"owner"`
+	Members []string `json:"members"`
 }
 
 type BaseJob struct {
 	runner.JobInterface
-	Active bool
-	ID     string
-	Admin  JobAdmin
+	Active     bool     `json:"active"`
+	ID         string   `json:"id"`
+	Admin      JobAdmin `json:"admin"`
+	CreateDate string   `json:"createDate"`
 }
 
 // IsRun : Job를 실행해야하는 타임인지 여부를 반환합니다.
@@ -40,12 +41,7 @@ func (job *BaseJob) Remove(path string) error {
 	return f.Remove()
 }
 
-// BodyToCompile : body에 대한 추가적은 옵션이 필요하다면, 임베딩을 사용하세요.
-func (job *BaseJob) BodyToCompile(body string) string {
-	return body
-}
-
-// BodyToCompile : 기본 관리자를 수정하려면, 임베딩을 사용하세요.
+// GetDefaultOwner : 기본 관리자를 수정하려면, 임베딩을 사용하세요.
 func (job *BaseJob) GetDefaultOwner() string {
 	return "admin"
 }
