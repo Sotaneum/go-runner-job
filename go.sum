@@ -1,0 +1,6 @@
+github.com/Sotaneum/go-json-file v0.0.0-20210918004840-2b44ab774ac1 h1:re5DVIUF/fPu2vQnVU/TtnPVFqN1mH02sOv/RgzUVH0=
+github.com/Sotaneum/go-json-file v0.0.0-20210918004840-2b44ab774ac1/go.mod h1:KPqhbbR3JxjkfYJ36WGwVTecM8f4ONUbYFHY0Z5m20U=
+github.com/Sotaneum/go-kst-time v0.0.0-20210917180837-4af7bba542bc h1:vLFTyeBlR45nTxLIGVKDwdaO5lniF5kOuBWc/ctn0TE=
+github.com/Sotaneum/go-kst-time v0.0.0-20210917180837-4af7bba542bc/go.mod h1:Q+kh1LMunMi/EGYAdr2YXJMJgOGQNFHOdVMeZLVaa8g=
+github.com/Sotaneum/go-runner v0.0.1-beta h1:ueg+dOTKXD87MSKXZUWVSWa41bD1sVb7fDhTfrtRZ2o=
+github.com/Sotaneum/go-runner v0.0.1-beta/go.mod h1:eakFkpzaZxL9VN9+mGGRpEf4ui2T574cOYJQHZ27nVk=
