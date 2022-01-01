@@ -20,14 +20,12 @@ type Extra struct {
 }
 
 type BaseJobInterface interface {
-	IsRun(t time.Time) bool
+	runner.JobInterface
 	Save(path string)
 	Remove(path string) error
 	GetDefaultOwner() string
-	Run() interface{}
 	SetOwner(member string)
 	GetOwner() string
-	GetID() string
 	CreateID() error
 	HasAuthorization(member string) bool
 	HasAdminAuthorization(member string) bool
@@ -35,7 +33,6 @@ type BaseJobInterface interface {
 }
 
 type BaseJob struct {
-	runner.JobInterface
 	BaseJobInterface
 	Active     bool     `json:"active"`
 	ID         string   `json:"id"`
