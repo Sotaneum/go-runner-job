@@ -15,12 +15,17 @@ type JobAdmin struct {
 	Members []string `json:"members"`
 }
 
+type Extra struct {
+	Type string `json:"type"`
+}
+
 type BaseJob struct {
 	runner.JobInterface
 	Active     bool     `json:"active"`
 	ID         string   `json:"id"`
 	Admin      JobAdmin `json:"admin"`
 	CreateDate string   `json:"createDate"`
+	Extra      Extra    `json:"extra"`
 }
 
 // IsRun : Job를 실행해야하는 타임인지 여부를 반환합니다.
